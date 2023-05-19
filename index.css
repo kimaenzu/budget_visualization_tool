@@ -1,0 +1,54 @@
+ul {
+    list-style: none;
+}
+
+html {
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: 20px;
+}
+
+nav {
+    width: 12rem;
+    border: 1px solid;
+}
+
+header {
+    text-align: center;
+    margin: auto;
+    background-color: aliceblue;
+    animation: myanimation 3s infinite;
+    height: 100px;
+    align-items: center;
+    border: 1px solid;
+}
+
+main {
+    display: flex;
+}
+
+.main-div {
+    width: 500px;
+}
+
+.submit-button {
+    width: 5rem;
+    height: 1.5rem;
+    margin-top:1rem;
+    margin-left: 1.5rem;
+}
+
+.home {
+    font-family: 'gugi', cursive;
+}
+
+.home:hover {
+    cursor: pointer;
+}
+
+@keyframes myanimation {
+    0% {color: red;}
+    25%{color:yellow;}
+    50%{color:green;}
+    75%{color:blue;}
+    100% {color: red;}
+}

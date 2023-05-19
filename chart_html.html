@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>바로 보는 데이터, 디비바라</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+
+    <link rel="stylesheet" href="./index.css">
+    <link rel="js" href="./chart_js.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <header> <!-- 헤더 태그 내부에 Home(with hover, Click Event) -->
+        <h1 class="home animate__animated animate__bounce">디비바라</h1>
+    </header>
+
+    <main>
+        <nav class="main-nav"> <!-- 페이지 왼쪽 네비게이션 메뉴 형성 -->
+            <form method="get">
+                <ul class="ds-list">
+                    <li>
+                        <input type="checkbox" name="checkedValue" value="부서명" />부서
+                    </li>
+                    <li>
+                        <input type="checkbox" name="checkedValue" value="단위사업명" />단위사업명
+                    </li>
+                    <li>
+                        <input type="checkbox" name="checkedValue" value="분야" />분야
+                    </li>
+                    <li>
+                        <input type="checkbox" name="checkedValue" value="사업구분" />사업구분
+                    </li>
+                    <li>
+                        <input type="checkbox" name="checkedValue" value="회계연도" />회계연도
+                    </li>
+                </ul>
+
+                <ul class="ds-radio">
+                    <input type="radio" name="checkedId" value="id1">예산 현액
+                    <input type="radio" name="checkedId" value="id1">지출액
+                    <input type="radio" name="checkedId" value="id1">비율
+                    <br>
+                    <input type="submit" value="데이터 시각화" class="submit-button" />
+                </ul>
+
+                <p>연도</p>
+
+                <ul class="ds-radio">
+                    <label for="cowbell">2016</label>
+                    <input type="range" id="YEAR" name="YEAR" min="2016" max="2023" value="90" step="1">
+                    <label for="cowbell">2023</label>
+                </ul>
+
+            </form>
+        </nav>
+
+        <div class="main-div">
+            <div id="output">
+                <canvas id="my-chart" style="width:1000px; height: 1000px"></canvas>
+            </div>
+        </div>
+    </main>
+
+    <footer> <!-- Position: Fixed 지정하고 회사 정보나 광고 받기 -->
+
+    </footer>
+
+</body>
